@@ -13,6 +13,8 @@ import {
   CheckCircle,
   Zap,
   BarChart3,
+  Lock,
+  GaugeCircle,
 } from "lucide-react";
 
 export default function Page() {
@@ -74,44 +76,49 @@ export default function Page() {
 
       {/* Features Section */}
       <section className="mt-24">
-        <h2 className="text-3xl font-bold tracking-tight text-center">Features Built for Agents</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-center">Features</h2>
         <div className="mt-12 grid md:grid-cols-2 gap-6">
           {[
             {
+              icon: <BarChart3 className="h-8 w-8 text-primary" />,
               title: "AI Scored Leads",
               desc: "Automatically ranked as Hot, Warm, or Cold — so you focus only on the best opportunities.",
             },
             {
+              icon: <GaugeCircle className="h-8 w-8 text-primary" />,
               title: "24/7 Ad Automation",
               desc: "AI writes, launches, and manages property ads while you focus on closing deals.",
             },
             {
+              icon: <CheckCircle className="h-8 w-8 text-primary" />,
               title: "Smart Lead Dashboard",
               desc: "Track every lead, their score, and contact info in a clean, agent-only interface.",
             },
             {
+              icon: <Lock className="h-8 w-8 text-primary" />,
               title: "Data Privacy Guaranteed",
               desc: "Your data stays yours. Leads are private to your account, protected with secure login and encrypted access.",
             },
           ].map((feature, i) => (
-            <Card key={i} className="bg-primary text-white shadow-md">
-              <CardHeader>
-                <CardTitle>{feature.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-white/80">{feature.desc}</CardDescription>
-              </CardContent>
-            </Card>
+            <div key={i} className="flex items-start gap-4 p-6 bg-blue-50 rounded-lg shadow-sm">
+              <div className="p-2 bg-blue-100 rounded-full">
+                {feature.icon}
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">{feature.title}</h3>
+                <p className="mt-2 text-muted-foreground">{feature.desc}</p>
+              </div>
+            </div>
           ))}
         </div>
       </section>
 
       {/* Final CTA Section */}
-      <section className="mt-24 text-center">
+      <section className="mt-24 text-center bg-primary text-white p-16 rounded-xl">
         <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
           Ready to transform your real estate business?
         </h2>
-        <p className="mt-4 text-xl text-muted-foreground">
+        <p className="mt-4 text-xl">
           Join our exclusive beta program and be among the first to experience the future of lead generation.
         </p>
         <a
@@ -122,7 +129,7 @@ export default function Page() {
           <Button
             size="lg"
             variant="secondary"
-            className="mt-10 text-white bg-primary hover:bg-primary/90 text-lg h-14 px-8"
+            className="mt-10 bg-white text-primary hover:bg-white/90 text-lg h-14 px-8"
           >
             Apply for Beta Access <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
