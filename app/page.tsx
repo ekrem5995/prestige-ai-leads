@@ -14,7 +14,6 @@ import {
   Zap,
   BarChart3,
   Lock,
-  Settings2,
 } from "lucide-react";
 
 export default function Page() {
@@ -82,22 +81,22 @@ export default function Page() {
             {
               title: "AI Scored Leads",
               desc: "Automatically ranked as Hot, Warm, or Cold — so you focus only on the best opportunities.",
-              icon: <BarChart3 className="w-6 h-6 text-blue-500" />,
+              icon: <BarChart3 className="h-6 w-6 text-primary" />,
             },
             {
               title: "24/7 Ad Automation",
               desc: "AI writes, launches, and manages property ads while you focus on closing deals.",
-              icon: <Settings2 className="w-6 h-6 text-blue-500" />,
+              icon: <Zap className="h-6 w-6 text-primary" />,
             },
             {
               title: "Smart Lead Dashboard",
               desc: "Track every lead, their score, and contact info in a clean, agent-only interface.",
-              icon: <CheckCircle className="w-6 h-6 text-blue-500" />,
+              icon: <CheckCircle className="h-6 w-6 text-primary" />,
             },
             {
               title: "Data Privacy Guaranteed",
               desc: "Your data stays yours. Leads are private to your account, protected with secure login and encrypted access.",
-              icon: <Lock className="w-6 h-6 text-blue-500" />,
+              icon: <Lock className="h-6 w-6 text-primary" />,
             },
           ].map((feature, i) => (
             <Card key={i} className="bg-white text-black shadow-md">
@@ -106,7 +105,7 @@ export default function Page() {
                 <CardTitle>{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-600">{feature.desc}</CardDescription>
+                <CardDescription>{feature.desc}</CardDescription>
               </CardContent>
             </Card>
           ))}
@@ -114,26 +113,28 @@ export default function Page() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="mt-24 bg-primary text-white text-center py-20 px-4">
-        <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-          Ready to transform your real estate business?
-        </h2>
-        <p className="mt-4 text-xl">
-          Join our exclusive beta program and be among the first to experience the future of lead generation.
-        </p>
-        <a
-          href="https://tally.so/r/mBg065"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button
-            size="lg"
-            variant="secondary"
-            className="mt-10 text-primary bg-white hover:bg-gray-100 text-lg h-14 px-8"
+      <section className="mt-24 bg-primary text-white w-full py-20 px-4 md:px-0">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Ready to transform your real estate business?
+          </h2>
+          <p className="mt-4 text-xl">
+            Join our exclusive beta program and be among the first to experience the future of lead generation.
+          </p>
+          <a
+            href="https://tally.so/r/mBg065"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Apply for Beta Access <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-        </a>
+            <Button
+              size="lg"
+              variant="secondary"
+              className="mt-10 bg-white text-primary hover:bg-gray-100 text-lg h-14 px-8"
+            >
+              Apply for Beta Access <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </a>
+        </div>
       </section>
     </div>
   );
