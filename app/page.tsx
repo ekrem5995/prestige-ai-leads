@@ -100,7 +100,7 @@ export default function Page() {
           ].map((feature, i) => (
             <Card key={i} className="bg-card text-card-foreground">
               <CardHeader>
-                <CardTitle>{feature.title}</CardTitle>
+                <CardTitle className="text-primary">{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>{feature.desc}</CardDescription>
