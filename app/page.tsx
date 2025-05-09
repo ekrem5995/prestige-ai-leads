@@ -21,9 +21,9 @@ export default function Page() {
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
           Get High-Quality Real Estate Leads Without Lifting a Finger
         </h1>
-        <p className="mt-4 text-xl text-muted-foreground">
-          Prestige AI Leads uses GPT-powered automation to deliver pre-qualified, high-scoring leads directly to your dashboard.
-        </p>
+       <p className="mt-4 text-xl text-muted-foreground">
+        Prestige AI Leads uses AI-powered automation to deliver pre-qualified, high-scoring leads directly to your dashboard.
+       </p>
         <a
           href="https://tally.so/r/mBg065"
           target="_blank"
