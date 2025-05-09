@@ -2,19 +2,14 @@
 
 import { Button } from "@/components/ui/button";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
   ArrowRight,
   CheckCircle,
   Zap,
   BarChart3,
-  Lock,
+  Briefcase,
+  CalendarCheck,
   GaugeCircle,
+  Lock,
 } from "lucide-react";
 
 export default function Page() {
@@ -31,7 +26,8 @@ export default function Page() {
           Get High-Quality Real Estate Leads Without Lifting a Finger
         </h1>
         <p className="mt-4 text-xl text-muted-foreground">
-          Prestige AI Leads uses AI-powered automation to deliver pre-qualified, high-scoring leads directly to your dashboard.
+          Prestige AI Leads uses AI-powered automation to deliver pre-qualified,
+          high-scoring leads directly to your dashboard.
         </p>
         <a
           href="https://tally.so/r/mBg065"
@@ -80,33 +76,34 @@ export default function Page() {
         <div className="mt-12 grid md:grid-cols-2 gap-6">
           {[
             {
-              icon: <BarChart3 className="h-8 w-8 text-primary" />,
+              icon: <GaugeCircle className="h-8 w-8 text-primary bg-primary/10 p-2 rounded-full" />,
               title: "AI Scored Leads",
               desc: "Automatically ranked as Hot, Warm, or Cold — so you focus only on the best opportunities.",
             },
             {
-              icon: <GaugeCircle className="h-8 w-8 text-primary" />,
+              icon: <CalendarCheck className="h-8 w-8 text-primary bg-primary/10 p-2 rounded-full" />,
               title: "24/7 Ad Automation",
               desc: "AI writes, launches, and manages property ads while you focus on closing deals.",
             },
             {
-              icon: <CheckCircle className="h-8 w-8 text-primary" />,
+              icon: <Briefcase className="h-8 w-8 text-primary bg-primary/10 p-2 rounded-full" />,
               title: "Smart Lead Dashboard",
               desc: "Track every lead, their score, and contact info in a clean, agent-only interface.",
             },
             {
-              icon: <Lock className="h-8 w-8 text-primary" />,
+              icon: <Lock className="h-8 w-8 text-primary bg-primary/10 p-2 rounded-full" />,
               title: "Data Privacy Guaranteed",
               desc: "Your data stays yours. Leads are private to your account, protected with secure login and encrypted access.",
             },
-          ].map((feature, i) => (
-            <div key={i} className="flex items-start gap-4 p-6 bg-blue-50 rounded-lg shadow-sm">
-              <div className="p-2 bg-blue-100 rounded-full">
-                {feature.icon}
-              </div>
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-white border border-border rounded-xl p-6 shadow-sm flex items-start gap-4"
+            >
+              {item.icon}
               <div>
-                <h3 className="text-xl font-semibold text-foreground">{feature.title}</h3>
-                <p className="mt-2 text-muted-foreground">{feature.desc}</p>
+                <h3 className="text-lg font-semibold">{item.title}</h3>
+                <p className="text-muted-foreground mt-1">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -114,11 +111,11 @@ export default function Page() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="mt-24 text-center bg-primary text-white p-16 rounded-xl">
+      <section className="mt-24 text-center">
         <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
           Ready to transform your real estate business?
         </h2>
-        <p className="mt-4 text-xl">
+        <p className="mt-4 text-xl text-muted-foreground">
           Join our exclusive beta program and be among the first to experience the future of lead generation.
         </p>
         <a
@@ -129,7 +126,7 @@ export default function Page() {
           <Button
             size="lg"
             variant="secondary"
-            className="mt-10 bg-white text-primary hover:bg-white/90 text-lg h-14 px-8"
+            className="mt-10 text-white bg-primary hover:bg-primary/90 text-lg h-14 px-8"
           >
             Apply for Beta Access <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
