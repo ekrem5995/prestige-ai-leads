@@ -26,15 +26,12 @@ export default function Page() {
           alt="Prestige AI Leads logo"
           className="mx-auto mb-6 w-32 h-auto md:w-40"
         />
-
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
           Get High-Quality Real Estate Leads Without Lifting a Finger
         </h1>
-
         <p className="mt-4 text-xl text-muted-foreground">
           Prestige AI Leads uses GPT-powered automation to deliver pre-qualified, high-scoring leads directly to your dashboard.
         </p>
-
         <a
           href="https://tally.so/r/mBg065"
           target="_blank"
@@ -98,12 +95,12 @@ export default function Page() {
               desc: "Your data stays yours. Leads are private to your account, protected with secure login and encrypted access.",
             },
           ].map((feature, i) => (
-            <Card key={i} className="bg-card text-card-foreground">
+            <Card key={i} className="bg-primary text-white shadow-md">
               <CardHeader>
-                <CardTitle className="text-primary">{feature.title}</CardTitle>
+                <CardTitle>{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>{feature.desc}</CardDescription>
+                <CardDescription className="text-white/80">{feature.desc}</CardDescription>
               </CardContent>
             </Card>
           ))}
@@ -118,7 +115,6 @@ export default function Page() {
         <p className="mt-4 text-xl text-muted-foreground">
           Join our exclusive beta program and be among the first to experience the future of lead generation.
         </p>
-
         <a
           href="https://tally.so/r/mBg065"
           target="_blank"
