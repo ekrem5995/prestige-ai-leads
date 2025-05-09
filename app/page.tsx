@@ -1,14 +1,6 @@
-
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import {
   ArrowRight,
   CheckCircle,
@@ -76,7 +68,7 @@ export default function Page() {
       {/* Features Section */}
       <section className="mt-24">
         <h2 className="text-3xl font-bold tracking-tight text-center">Features Built for Agents</h2>
-        <div className="mt-12 grid md:grid-cols-2 gap-6">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto px-4">
           {[
             {
               title: "AI Scored Leads",
@@ -95,14 +87,13 @@ export default function Page() {
               desc: "Your data stays yours. Leads are private to your account, protected with secure login and encrypted access.",
             },
           ].map((feature, i) => (
-            <Card key={i} className="bg-primary text-white shadow-md">
-              <CardHeader>
-                <CardTitle>{feature.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-white/80">{feature.desc}</CardDescription>
-              </CardContent>
-            </Card>
+            <div
+              key={i}
+              className="bg-primary text-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-200"
+            >
+              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              <p className="text-white/80">{feature.desc}</p>
+            </div>
           ))}
         </div>
       </section>
